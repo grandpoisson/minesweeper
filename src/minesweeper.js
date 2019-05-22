@@ -23,7 +23,7 @@ const generateBombBoard = (numberOfRows, numberOfColumns, numberOfBombs) => {
     while (numberOfBombsPlaced < numberOfBombs) {
         let randomRowIndex = Math.floor(Math.random() * numberOfRows);
         let randomColumnIndex = Math.floor(Math.random() * numberOfColumns);
-        if (!board[randomRowIndex][randomColumnIndex] ==='B'){
+        if (board[randomRowIndex][randomColumnIndex] !=='B'){
             board[randomRowIndex][randomColumnIndex] = 'B';
         numberOfBombsPlaced ++;
         }
@@ -82,6 +82,6 @@ let playerBoard = generatePlayerBoard(3,4);
 let bombBoard = generateBombBoard(3,4,5);
 console.log('Player Board: '+ printBoard(playerBoard));
 console.log('  Bomb Board: '+ printBoard(bombBoard));
-flipTile(playerBoard, bombBoard, 0, 0);
+flipTile(playerBoard, bombBoard,1,1);
 console.log('Updated Player Board:');
 printBoard(playerBoard);
