@@ -114,24 +114,5 @@ class Board {
 
 }
 
-
-
-
-
-
-
-
-
-
-
- 
-/*this._playerBoard = generatePlayerBoard(3,4);
-this._bombBoard = generateBombBoard(3,4,5);
-console.log('Player Board: '+ print(this._playerBoard));
-console.log('  Bomb Board: '+ print(this._bombBoard));
-flipTile(this._playerBoard, this._bombBoard,1,1);
-console.log('Updated Player Board:');
-print(this._playerBoard);*/
-
 const g = new Game(8,8,12);
 g.playMove(4,6);
