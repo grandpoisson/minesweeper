@@ -7,6 +7,11 @@ class Game {
         if (this._board.playerBoard[rowIndex][columnIndex] === 'B') {
             console.log('Boom! Game Over');
             this.board.print
+        } else if (!this._board.hasSafeTiles) {
+            console.log('Congratulations - you survived!')
+        } else {
+            console.log('Current Board:');
+            this._board.print;
         }
     }
 }
@@ -126,3 +131,6 @@ console.log('  Bomb Board: '+ print(this._bombBoard));
 flipTile(this._playerBoard, this._bombBoard,1,1);
 console.log('Updated Player Board:');
 print(this._playerBoard);
+
+const g = new Game(3,3,3);
+g.playMove(0,0);
